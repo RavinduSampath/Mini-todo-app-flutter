@@ -1,24 +1,41 @@
 class Todo {
   String id;
   String title;
-  // String description;
   bool isDone;
 
-  Todo(
-      {required this.id,
-      required this.title,
-      // required this.description,
-      this.isDone = false});
+  Todo({
+    required this.id,
+    required this.title,
+    this.isDone = false,
+  });
 
-  void isToggled() {
+  void toggleDone() {
     isDone = !isDone;
   }
 
   static List<Todo> toDoList() {
     return [
-      Todo(id: '1', title: 'Buy Milk'),
-      Todo(id: '2', title: 'Buy Bread'),
-      Todo(id: '3', title: 'Buy Eggs'),
+      Todo(
+        id: '1',
+        title: "Morning Gym",
+        isDone: true,
+      ),
+      Todo(
+        id: '2',
+        title: "Breakfast",
+      ),
+      Todo(
+        id: '3',
+        title: "Office",
+      ),
+      Todo(
+        id: '4',
+        title: "Lunch",
+      ),
+      Todo(
+        id: '5',
+        title: "Evening Gym",
+      ),
     ];
   }
 }
